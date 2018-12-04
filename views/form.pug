@@ -1,0 +1,17 @@
+html
+    head
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700")
+        link(rel="stylesheet" href="/css/main.css")
+    body
+    .wrapper
+        .lightbox(v-show="formLightbox == true" style="display: none;")
+        h2.lightbox__header
+            form.lightbox__form(action="/formdata" method="POST")
+                .lightbox__form-control
+                    label.lightbox__label A:
+                    input.lightbox__input(placeholder="Name" type="text" name="name")
+                .lightbox__form-control
+                    label.lightbox__label B:
+                    input.lightbox__input(placeholder="Last name" type="text" name="lastName")
+                .lightbox__actions
+                    button.btn.btn--primary Submit
